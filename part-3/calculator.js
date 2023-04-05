@@ -35,3 +35,5 @@ export function calculate(operator, firstNumber, secondNumber) {
       throw new Error(`Unsupported operator ${operator}`);
   }
 }
+
+console.log(calculate ("*", 10, 5))

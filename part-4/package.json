@@ -4,5 +4,12 @@
   "description": "",
   "main": "app.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }

@@ -37,6 +37,33 @@ import {
  * Use your set of tests to debug the function. The first test is written for you (but feel free to rewrite it if you prefer).
  *
  */
+
+// Win tests
+test(`calculateRoundResults returns the correct string when playerMove is 'Paper' and computerMove is 'Rock'`, () => {
+  const playerMove = "paper";
+  const computerMove = "rock";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Player chose paper and computer chose rock. Player wins.";
+  expect(actual).toBe(expected);
+});
+
+test(`calculateRoundResults returns the correct string when playerMove is 'Paper' and computerMove is 'Rock'`, () => {
+  const playerMove = "scissors";
+  const computerMove = "paper";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Player chose scissors and computer chose paper. Player wins.";
+  expect(actual).toBe(expected);
+});
+
+test(`calculateRoundResults returns the correct string when playerMove is 'Paper' and computerMove is 'Rock'`, () => {
+  const playerMove = "rock";
+  const computerMove = "scissors";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Player chose rock and computer chose scissors. Player wins.";
+  expect(actual).toBe(expected);
+});
+
+// Loss tests
 test(`calculateRoundResults returns the correct string when playerMove is 'rock' and computerMove is 'paper'`, () => {
   const playerMove = "rock";
   const computerMove = "paper";
@@ -44,6 +71,49 @@ test(`calculateRoundResults returns the correct string when playerMove is 'rock'
   const expected = "Player chose rock and computer chose paper. Computer wins.";
   expect(actual).toBe(expected);
 });
+
+test(`calculateRoundResults returns the correct string when playerMove is 'rock' and computerMove is 'paper'`, () => {
+  const playerMove = "paper";
+  const computerMove = "scissors";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Player chose paper and computer chose scissors. Computer wins.";
+  expect(actual).toBe(expected);
+});
+
+test(`calculateRoundResults returns the correct string when playerMove is 'rock' and computerMove is 'paper'`, () => {
+  const playerMove = "scissors";
+  const computerMove = "rock";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Player chose scissors and computer chose rock. Computer wins.";
+  expect(actual).toBe(expected);
+});
+
+// Draw tests
+
+test(`calculateRoundResults returns the correct string when playerMove is 'rock' and computerMove is 'paper'`, () => {
+  const playerMove = "rock";
+  const computerMove = "rock";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Both players chose rock. It's a draw.";
+  expect(actual).toBe(expected);
+});
+
+test(`calculateRoundResults returns the correct string when playerMove is 'rock' and computerMove is 'paper'`, () => {
+  const playerMove = "paper";
+  const computerMove = "paper";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Both players chose paper. It's a draw.";
+  expect(actual).toBe(expected);
+});
+
+test(`calculateRoundResults returns the correct string when playerMove is 'rock' and computerMove is 'paper'`, () => {
+  const playerMove = "scissors";
+  const computerMove = "scissors";
+  const actual = calculateRoundResult(playerMove, computerMove);
+  const expected = "Both players chose scissors. It's a draw.";
+  expect(actual).toBe(expected);
+});
+
 
 /**
  * Task 2 - Test calculateNewScores
